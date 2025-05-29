@@ -120,7 +120,7 @@ const deleteTaskById = (req, res) => {
     // const removedTask = tasksData.tasks[taskIndex];
     // console.log("Removed Task", removedTask);
     tasks?.splice(taskIndex, 1);
-    res.status(204).send();
+    res.status(200).send();
   }
 
   module.exports = {

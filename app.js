@@ -15,6 +15,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(`${apiendpoint}/`, homeRoute);
 app.use(`${apiendpoint}/tasks`, taskRoutes);
 
+// All test cases are passing without the apiendpoint prefix
+// app.use("/tasks", taskRoutes);
+
 app.use(errorHandler);
 
 app.listen(PORT, (err) => {
@@ -24,6 +27,5 @@ app.listen(PORT, (err) => {
     console.log(`Server is running on port ${PORT}`);
   }
 });
-
 
 module.exports = app;
